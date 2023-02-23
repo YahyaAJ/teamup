@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import avatar from "../../assets/img/3D00868 1.png";
+import avatar from "../../assets/img/3D00868.png";
 import photo from "../../assets/img/user.png";
 import ProjectCard from "./ProjectCard";
 import PopupRegister from "./PopupRegister";
