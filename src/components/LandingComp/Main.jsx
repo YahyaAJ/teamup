@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import img from "../../assets/img/img_landingpage.png";
 import logo from "../../assets/logo/logo_medium.svg";
-import Navbar from "./Navbar";
-// import Nav from "./Nav";
+// import Navbar from "./Navbar";
+import Nav from "./Nav";
 import Login from "./Login";
 import Register from "./Register";
 import PopupSuccess from "./PopupSuccess";
@@ -28,17 +28,18 @@ function Main() {
   );
   const text = changeForm ? "MASUK" : "DAFTAR";
   return (
-    <div id="main" className="relative min-h-min lg:min-h-[100vh]">
+    <div id="main" className="relative min-h-min lg:min-h-[100vh] 4xl:min-h-min">
       {modal ? <PopupSuccess toogle={modalInactive} /> : null}
       <div className="fixed top-0 inset-x-0 z-50">
-        <Navbar button={toogle} text={text} />
+        <Nav button={toogle} text={text} />
+        {/* <Navbar button={toogle} text={text} /> */}
       </div>
       <div className="w-full lg:flex lg:items-center lg:h-screen">
-        <div className="w-full flex items-center mt-2 ">
+        <div className="w-full flex items-center mt-2 lg:mt-[10vh] ">
           <img
             src={img}
             alt="image"
-            className="hidden lg:block w-[58%] z-[-5] ml-[-1%] mb-[4%]"
+            className="hidden lg:block absolute w-[58%] 2xl:w-[65%] z-[-5] left-[-2%]   mb-[4%]"
           />
           <div className="mb-[-60px]">
             <img
@@ -47,7 +48,7 @@ function Main() {
               className="lg:hidden mt-8 w-full ml-2 bottom-0"
             />
           </div>
-          <div className="absolute hidden w-[45%] lg:block right-[5%]">
+          <div className="absolute hidden w-[45%] lg:block right-[5%] ">
             {form}
           </div>
         </div>
